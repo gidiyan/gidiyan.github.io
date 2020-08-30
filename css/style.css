@@ -1,7 +1,87 @@
 /*main style*/
 
-body {
-    color: brown;
-    background: cornsilk;
+html {
+    font-size: 16px;
+}
 
+body {
+    color: rgb(15, 190, 202);
+    font-size: 0.75rem;
+    font-family: 'Roboto', sans-serif;
+    background: rgba(186, 229, 240, 0.1);
+}
+
+div {
+    color: black;
+    width: 100%;
+}
+
+p {
+    font-size: large;
+    color: black;
+}
+
+header h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #333333;
+}
+
+header h2 {
+    text-align: center;
+}
+
+.banner {
+    width: 100vw;
+    height: 30vh;
+    background: linear-gradient(0.25turn, #000000, #ebf8e1, #000000);
+    margin: 0 auto;
+}
+
+
+.product ul {
+    list-style: none;
+}
+
+.product ul li {
+    display: inline;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding-right: 1.5em;
+    font-size: 1.5rem;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+.col {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.row {
+    width: 100%;
+}
+
+.contact {
+    list-style: none;
+    font-size: 2rem;
+}
+.navbar {
+    background: linear-gradient(0.25turn, #000000, #ebf8e1, #000000);
 }
