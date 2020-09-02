@@ -12,7 +12,6 @@ body {
     content: '';
     display: block;
     clear: both;
-    height: 0px;
     visibility: hidden;
 }
 .navbar {
@@ -44,22 +43,7 @@ body {
     text-decoration: underline;
     color: darkblue;
 }
-.banner {
-    width: 90vw;
-    height: auto;
-    margin: 0 auto;
-    position	: relative;
-    text-align: center;
-    left		: 0;
-    color: black;
-    background: white;
-}
-.ban{
-    width: 100%;
-    float: left;
-    text-align: center;
-    font-size: large;
-}
+
 .titles {
     font-size: 30px;
     text-align: center;
@@ -99,7 +83,12 @@ body {
     width: 25%;
     text-align: center;
 }
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
+}
 .product ul {
     list-style: none;
 }
@@ -109,26 +98,27 @@ body {
 }
 
 .products .button {
-    position: center;
-    top: 50%;
-    left: 50%;
+   position: relative;
+    top: 150%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: transparent;
-    color: black;
+    color: lightskyblue;
     font-size: 16px;
-    padding: 12px 20px;
-    border: black;
+    padding: 10px 15px;
     cursor: pointer;
-    border-radius: 5px;
+    border: transparent;
 }
 
 .products .button:hover {
-    background-color: darkgray;
+    background-color: rgba(211,211,211,0.5);
 }
-p {
+h3 {
     font-size: large;
     color: black;
+    margin-top: 1px;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
 }
 h1 {
     font-size: 3em;
@@ -140,15 +130,11 @@ h2 {
     color: black;
     font-family: 'Alata', sans-serif;
 }
-h3 {
-    text-align: -moz-center;
-    color: black;
-    font-family: 'Alata', sans-serif;
+p {
+
 }
-.contact {
-    list-style: none;
-    font-size: 2rem;
-}
+
+
 .footer{
     margin: 0 auto;
     color: black;
