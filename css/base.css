@@ -99,7 +99,7 @@
         display: inline-block;
         padding: 0.5rem 1rem;
         background-color: transparent;
-        color: var(--color-1);
+        color: var(--color-5);
         text-transform: uppercase;
         position: absolute;
         top: 5%;
@@ -109,7 +109,7 @@
         display: inline-block;
         padding: 0.5rem 1rem;
         background-color: transparent;
-        color: var(--color-1);
+        color: var(--color-5);
         text-transform: uppercase;
         position: absolute;
         text-decoration: underline;
@@ -253,7 +253,7 @@
         padding: 0.5rem 1rem;
         text-transform: uppercase;
         background-color: transparent;
-        color: var(--color-1);
+        color: var(--color-5);
         position: absolute;
         top: 5%;
         font-size: 1.5rem;
@@ -262,7 +262,7 @@
         display: inline-block;
         padding: 0.5rem 1rem;
         background-color: transparent;
-        color: var(--color-1);
+        color: var(--color-5);
         text-transform: uppercase;
         position: absolute;
         text-decoration: underline;
