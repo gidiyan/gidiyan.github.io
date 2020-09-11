@@ -120,14 +120,6 @@ li{
     position: relative;
     display: block;
 }
-.text-inside{
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: var(--color-1);
-    text-transform: uppercase;
-    position: absolute;
-    top: 20%;
-}
 .prod-overflow{
     position: relative;
     display: block;
