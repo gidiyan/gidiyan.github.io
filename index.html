@@ -8,34 +8,39 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/base.css" rel="stylesheet">
+    <link href="css/effect.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/backup.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <div class="container">
         <!--main header page-->
         <nav>
-
             <div class="navbar-center">
                 <!-- navigation -->
                 <div class="sm-nav md-nav tb-nav">
-                    <div class="sm-brand md-brand tb-brand">
-                        <img alt="" src="images/kindpng_625081.png" class="or-1">
-                    </div>
-                    <div class="sm-links md-links tb-links">
-                        <ul class="sm-links md-links tb-links or-2">
+                        <ul class="sm-brand md-brand tb-brand">
+                        <li><img class="img-fluid" alt="" src="images/kindpng_625081.png"></li></ul>
+
+                        <ul class="sm-links md-links tb-links">
                             <li><a href="index.html">Main</a></li>
-                            <li><a href="about.html">Products</a></li>
+                            <li><a href="shop.html">Products</a></li>
                             <li><a href="blog.html">News</a></li>
                             <li><a href="contact.html">Contacts</a></li>
                         </ul>
-                    </div>
+
                     <ul class="sm-tools md-tools tb-tools or-3">
                         <li><a href="#"><i class="fas fa-dolly-flatbed"></i>(1)</a></li>
                         <li><a href="#"><i class="far fa-heart"></i>(2)</a></li>
-                        <li><a href="#"><i class="fas fa-user-alt"></i></a></li>
+                        <li><a href="#login"><i class="fas fa-user-alt"></i></a></li>
                     </ul>
-                    <button class="nav-hamburg"><i class="fas fa-bars fa"></i></button>
+
+<!--                <label for="hamburger"><i class="nav-hamburg fa-bars fa"></i></label>-->
                 </div>
             </div>
         </nav>
@@ -46,6 +51,7 @@
         <!--            </header>-->
         <!--        </section>-->
         <!-- categories -->
+        <div class="row"><a class="pic-center" href="#"><img src="images/banner.gif" width="50%"> </a></div>
         <section>
             <div class="categories">
                 <header class="titles">
@@ -68,111 +74,49 @@
         <div class="products">
             <section>
                 <header class="titles">
-                    <h2>PRODUCTS</h2>
+                    <h2>TOP PRODUCTS</h2>
                 </header>
                 <div class="row">
-                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
-                        <a href="#"><img alt="prod1" src="./images/prod1.jpg" class=" prod-overflow img-fluid"><strong class="sm-desc prod-desc">Origen Regional Red</strong></a>
-                        <ul class="prod-text">
-                            <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
-                            <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
-                            <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
-                        </ul>
-                        <ul class="prod-text">
-                            <li>
-                                <strong class="sm-bottom prod-bottom">28.99$</strong>
-                            </li>
-                        </ul>
+                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent">
+                        <a href="#"><img alt="prod1" src="./images/prod1.jpg" class="prod-overflow img-fluid"></a>
+                        <strong class="sm-bottom prod-bottom">28.99$</strong>
+                        <strong class="sm-desc prod-desc">Origen Regional Red</strong>
+                        <div class="prod-text">
+                            <ul >
+                                <li><a title="Like" href="#"><button class="button"><i class="far fa-thumbs-up"></i></button></a></li>
+                                <li><a title="Add to cart" href="#"><strong class="but-cart">Add to cart</strong></a></li>
+                                <li><a title="Adidas wear for medium dogs" href="#"><button class="button"><i class="fas fa-info-circle"></i></button></a></li>
+                            </ul>
+                        </div>
                     </div>
-                  <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
-                        <a href="#"><img alt="prod1" src="./images/prod2.jpg" class="img-fluid"><strong class="sm-desc prod-desc">Grandorf Brown</strong></a>
+                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent">
+                        <a href="#"><img alt="prod1" src="./images/prod4.jpg" class="img-fluid"></a>
+                        <strong class="sm-bottom prod-bottom">26.99$</strong>
+                        <strong class="sm-desc prod-desc">Earthborn Coastal Catch</strong>
                         <ul class="prod-text">
                             <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
                             <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
                             <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
-                        </ul>
-                        <ul class="prod-text">
-                            <li>
-                                <strong class="sm-bottom prod-bottom">31.99$</strong>
-                            </li>
                         </ul>
                     </div>
                     <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
-                        <a href="#"><img alt="prod1" src="./images/prod8.jpg" class="img-fluid"><strong class="sm-desc prod-desc">Smart Toy</strong></a>
+                        <a href="#"><img alt="prod1" src="./images/prod6.jpg" class="img-fluid"></a>
+                        <strong class="sm-bottom prod-bottom">69.99$</strong>
+                        <strong class="sm-desc prod-desc">Moschino Hoody</strong>
                         <ul class="prod-text">
                             <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
                             <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
                             <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
-                        </ul>
-                        <ul class="prod-text">
-                            <li>
-                                <strong class="sm-bottom prod-bottom">62.99$</strong>
-                            </li>
-                    </ul>
-                    </div>
-                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
-                        <a href="#"><img alt="prod1" src="./images/prod4.jpg" class="img-fluid"><strong class="sm-desc prod-desc">Earthborn Coastal Catch</strong></a>
-                        <ul class="prod-text">
-                            <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
-                            <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
-                            <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
-                        </ul>
-                        <ul class="prod-text">
-                            <li>
-                                <strong class="sm-bottom prod-bottom">26.99$</strong>
-                            </li>
                         </ul>
                     </div>
                     <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
-                        <a href="#"><img alt="prod1" src="./images/prod5.jpg" class="img-fluid"><strong class="sm-desc prod-desc">Carnilove Salmon&Turkey</strong></a>
+                        <a href="#"><img alt="prod1" src="./images/prod7.jpg" class="img-fluid"></a>
+                        <strong class="sm-bottom prod-bottom">79.99$</strong>
+                        <strong class="sm-desc prod-desc">Grey Suite</strong>
                         <ul class="prod-text">
                             <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
                             <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
                             <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
-                        </ul>
-                        <ul class="prod-text">
-                            <li>
-                                <strong class="sm-bottom prod-bottom">31.99$</strong>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
-                        <a href="#"><img alt="prod1" src="./images/prod6.jpg" class="img-fluid"><strong class="sm-desc prod-desc">Moschino Hoody</strong></a>
-                        <ul class="prod-text">
-                            <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
-                            <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
-                            <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
-                        </ul>
-                        <ul class="prod-text">
-                            <li>
-                                <strong class="sm-bottom prod-bottom">69.99$</strong>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
-                        <a href="#"><img alt="prod1" src="./images/prod7.jpg" class="img-fluid"><strong class="sm-desc prod-desc">Grey Suite</strong></a>
-                        <ul class="prod-text">
-                            <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
-                            <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
-                            <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
-                        </ul>
-                        <ul class="prod-text">
-                            <li>
-                                <strong class="sm-bottom prod-bottom">79.99$</strong>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
-                        <a href="#"><img alt="prod1" src="./images/prod3.jpg" class="img-fluid"><strong class="sm-desc prod-desc">Carnilove Carps&Trout</strong></a>
-                        <ul class="prod-text">
-                            <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
-                            <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
-                            <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
-                        </ul>
-                        <ul class="prod-text">
-                            <li>
-                                <strong class="sm-bottom prod-bottom">31.99$</strong>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -186,7 +130,7 @@
                 <li><b>Follow:</b></li>
                 <li><a href="https://twitter.com/dog_discount" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
                 <li><a href="https://www.instagram.com/dog_discount/" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
-                <li><a href="https://www.facebook.com/dog_discount/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://www.facebook.com/dog_discount/" target="_blank"><i class="fab fa-facebook"></i></a></li>
                 <li><a href="https://www.tiktok.com/@dogdiscount.ea?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a></li>
             </ul>
             <ul class="sm-foot md-foot tb-foot">
@@ -196,6 +140,65 @@
                 <li><a href="viber://chat/?number=+123456789123&lang=en" target="_blank"><i class="fab fa-viber"></i></a></li>
                 <li><a href="https://wa.me/123456789123?lang=ru&text=I%20have%20a%20question" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
             </ul>
+        </div>
+        <div id="login" class="modal">
+            <div class="dialog">
+                <a href="#close" class="close">X</a>
+                <form class="text-center border p-5 m-auto" action="">
+                    <h4 class="m-auto">Sign In</h4>
+                    <div class="mb-1">
+                        <label for="email"><input class="form-control" type="email" name="email" value="" id="email" placeholder="Enter Your Email"></label>
+                    </div>
+                    <div class="mb-1">
+                        <label for="password"><input class="form-control" type="password" name="username" value="" id="username" placeholder="Enter Your Password"></label></div>
+                    <div class="form-checkbox mb-1">
+                        <label class="text-col-4">
+                            <input class="form-control" type="checkbox">Remeber Me
+                        </label>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-dark btn-block">Login</button>
+                    <p class="mb-1">
+                        <a class="text-col-1" href="forgot.html">Forgot password</a>
+                    </p>
+                    <p class="p-1">
+                        Not a memer <a class="text-col-1" href="#register">Register</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+<div id="register" class="modal">
+            <div class="dialog">
+                <a href="#close" class="close">X</a>
+                <form class="text-center border p-5" action="">
+                    <h4 class="h4 mb-2 m-auto">Sign Up</h4>
+<div class="row mb-2 m-auto">
+    <div class="tb-2">
+        <label>
+            <input class="form-control" type="text" name="First Name" value="" placeholder="Enter Your First Name">
+        </label>
+    </div>
+    <div class="tb-2">
+        <label>
+            <input class="form-control" type="text" name="Last Name" value="" placeholder="Enter Your Last Name">
+        </label>
+    </div>
+</div>
+    <div class="row tb-1 m-auto">
+        <input class="form-control" type="email" name="email" value="" id="email" placeholder="Enter Your Email">
+    </div>
+    <div class="row tb-1  m-auto">
+        <label for="username"></label><input class="form-control text-center" type="password" name="username" value="" id="username" placeholder="Enter Your Password">
+        <input class="form-control text-center" type="password" name="username" value="" id="username" placeholder="Confirm Your Password">
+    </div>
+
+    <button type="submit" class="btn btn-dark btn-block">Resgister</button>
+    <p class="p-1">
+        Already a member? <a class="text-col-1 "href="#login">Sign In</a>
+    </p>
+                </form>
+            </div>
         </div>
     </div>
 </body>

@@ -1,0 +1,19 @@
+/* form style*/
+.form-control{
+    display: block;
+    width:100%;
+    height: calc(1.5rem+ 0.75rem+ 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1em;
+    line-height: 1.5;
+    color:var(--color-1);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: 0.25rem;
+}
+.form-control:focus{
+    color:var(--color-1);
+    background-color: var(--color-2);
+    border: 2px solid var(--color-3);
+    outline: none;
+}
