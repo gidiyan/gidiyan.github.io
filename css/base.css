@@ -136,11 +136,15 @@
         align-items: center;
         font-size: 1rem;
     }
-    .nav-hamburg{
-        color: var(--color-3);
-        background-color: transparent;
+    .nav-ham{
+        font-size: 3rem;
+     align-items: center;
     }
-.cs-3{
+    .nav-ham:hover {
+        color: var(--color-2);
+    }
+
+    .cs-3{
     flex: 0 0 calc(100%/3);
     max-width: calc(100%/3);
 }
@@ -211,9 +215,7 @@
         display: none;
         padding-top: 2.5rem;
         height: 0;
-
     }
-
     .sm-brand {
         display: block;
         font-size: 1rem;
@@ -226,6 +228,7 @@
         display: flex;
         justify-content: flex-end;
         padding-top: 2.5rem;
+        order: 1;
     }
 
     .sm-tools a {
@@ -336,6 +339,28 @@
     .products .row .tb-4{
         display: inline-flex;
     }
+    .nav-ham{
+        font-size: 3rem;
+        position: center;
+    }
+    .trig_menu{
+        display:none;
+    }
+    #hamburger:checked ~ .sm-links{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 60px;
+        height: auto;
+        background-color: var(--color-1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        font-size: 3rem;
+    }
+
 }
 /*todo: navigation: close menu+button*/
 /* Medium Devices */
@@ -399,6 +424,13 @@
         display: flex;
         justify-content: space-between;
     }
+    .nav-ham{
+        font-size: 3rem;
+        align-items: center;
+    }
+    .nav-ham:hover {
+        color: var(--color-2);
+    }
     .md-brand{
         display: block;
         margin-left: auto;
@@ -410,6 +442,27 @@
         justify-content: space-between;
         padding-top: 2.5rem;
         height: 0;
+    }
+    .nav-ham{
+        order:1;
+        font-size: 3rem;
+         }
+    .trig_menu{
+        display:none;
+    }
+    #hamburger:checked ~ .sm-links{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 60px;
+        height: auto;
+        background-color: var(--color-1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        font-size: 2rem;
     }
     .md-tools{
         display: flex;
@@ -617,6 +670,9 @@
         text-decoration: none;
         color: var(--color-5);
     }
+    .nav-ham{
+        display: none;
+    }
 
     .tb-nav a:hover {
         color: var(--color-2);
@@ -632,9 +688,10 @@
         max-width: calc(3 * 100% / 4)
     }
 
-    .nav-hamburg {
+    .nav-ham {
         display: none;
     }
+
 
     .tb-tools {
         display: flex;
@@ -972,7 +1029,9 @@
         width: 100%;
         display: flex;
     }
-
+    .nav-ham{
+        display: none;
+    }
     .tb-links {
         display: flex;
         justify-content: space-between;
