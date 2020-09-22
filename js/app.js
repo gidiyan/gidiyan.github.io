@@ -23,7 +23,8 @@
 
 let i;
 const likeMe=document.getElementById('like_me');
-for(i=0;i<4;i++){ document.getElementsByClassName('far fa-thumbs-up').item(i).addEventListener("click",function a(){
+var count = document.getElementsByClassName('far fa-thumbs-up');
+for(i=0;i<count.length;i++){ document.getElementsByClassName('far fa-thumbs-up').item(i).addEventListener("click",function a(){
     let curVal = likeMe.textContent;
     likeMe.textContent =+(curVal) + 1;});}
 
