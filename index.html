@@ -37,8 +37,8 @@
                         </ul>
 
                     <ul class="sm-tools md-tools tb-tools">
-                        <li><a href="#"><i class="fas fa-dolly-flatbed"></i>(1)</a></li>
-                        <li><a href="#"><i class="far fa-heart"></i>(2)</a></li>
+                        <li><a href="#"><i class="fas fa-dolly-flatbed"></i>(<small id="cart"></small>)</a></li>
+                        <li><a href="#"><i class="far fa-heart"></i>(<small id="like_me"></small>)</a></li>
                         <li><a href="#login"><i class="fas fa-user-alt"></i></a></li>
                     </ul>
                 <label for="hamburger" class="nav-ham"><i class="fa-bars fa"></i></label>
@@ -92,27 +92,25 @@
                 <header class="titles">
                     <h2>TOP PRODUCTS</h2>
                 </header>
-                <div class="row">
+                <div id="prod" class="row">
                     <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent">
                         <a href="#"><img alt="prod1" src="./images/prod1.jpg" class="prod-overflow img-fluid"></a>
                         <strong class="sm-bottom prod-bottom">28.99$</strong>
                         <strong class="sm-desc prod-desc">Origen Regional Red</strong>
-                        <div class="prod-text">
-                            <ul >
-                                <li><a title="Like" href="#"><button class="button"><i class="far fa-thumbs-up"></i></button></a></li>
+                            <ul class="prod-text">
+                                <li><button class="sm-button button but-like"><i class="far fa-thumbs-up"></i></button></li>
                                 <li><a title="Add to cart" href="#"><strong class="but-cart">Add to cart</strong></a></li>
-                                <li><a title="Adidas wear for medium dogs" href="#"><button class="button"><i class="fas fa-info-circle"></i></button></a></li>
+                                <li><button class="button"><i class="fas fa-info-circle"></i></button></li>
                             </ul>
-                        </div>
                     </div>
                     <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent">
                         <a href="#"><img alt="prod1" src="./images/prod4.jpg" class="img-fluid"></a>
                         <strong class="sm-bottom prod-bottom">26.99$</strong>
                         <strong class="sm-desc prod-desc">Earthborn Coastal Catch</strong>
                         <ul class="prod-text">
-                            <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
-                            <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
-                            <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
+                            <li><button class="but-like sm-button button"><i class="far fa-thumbs-up"></i></button></li>
+                            <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart add-to-cart">Add to cart</strong></a></li>
+                            <li><button class="sm-button button"><i class="fas fa-info-circle"></i></button></li>
                         </ul>
                     </div>
                     <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
@@ -120,9 +118,9 @@
                         <strong class="sm-bottom prod-bottom">69.99$</strong>
                         <strong class="sm-desc prod-desc">Moschino Hoody</strong>
                         <ul class="prod-text">
-                            <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
+                            <li><button class="but-like sm-button button"><i class="far fa-thumbs-up"></i></button></li>
                             <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
-                            <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
+                            <li><button class="sm-button button"><i class="fas fa-info-circle"></i></button></li>
                         </ul>
                     </div>
                     <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
@@ -130,9 +128,9 @@
                         <strong class="sm-bottom prod-bottom">79.99$</strong>
                         <strong class="sm-desc prod-desc">Grey Suite</strong>
                         <ul class="prod-text">
-                            <li><a title="Like" href="#"><button class="sm-button button"><i class="far fa-thumbs-up"></i></button></a></li>
+                            <li><button class="but-like sm-button button"><i class="far fa-thumbs-up"></i></button></li>
                             <li><a title="Add to cart" href="#"><strong class="sm-cart but-cart">Add to cart</strong></a></li>
-                            <li><a title="Adidas wear for medium dogs" href="#"><button class="sm-button button"><i class="fas fa-info-circle"></i></button></a></li>
+                            <li><button class="sm-button button"><i class="fas fa-info-circle"></i></button></li>
                         </ul>
                     </div>
                 </div>
@@ -217,5 +215,6 @@
             </div>
         </div>
     </div>
+<script src="js/app.js"></script>
 </body>
 </html>
