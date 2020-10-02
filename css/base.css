@@ -21,6 +21,8 @@
     --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
     --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
     --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+
+    --transition: all 0.3s linear;
 }
 
 .text-col-1 {

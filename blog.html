@@ -12,6 +12,8 @@
     <link href="css/modal.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link href="css/backup.css" rel="stylesheet">
+    <link href="css/animation.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <link rel="icon" href="images/kindpng_625081.png">
@@ -19,6 +21,34 @@
 <body>
 <div class="container">
     <!--main header page-->
+    <!-- cart  -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h5 class="logo">Your shopping cart</h5>
+        </div>
+        <div class="cart-items">
+            <div class="cart-item">
+                <div class="picture product-img">
+                    <img src="images/prod2.jpg" alt="product 4" class="img-fluid w-100">
+                </div>
+                <div class="product_name mx-auto">title</div>
+                <div class="remove-btn text-right">
+                    <a href="#" class="reset-anchor"><i class="fas fa-trash-alt"></i></a>
+                </div>
+                <div class="quantity">
+                    <div class="border d-flex justify-content-around mx-auto">
+                        <i class="fas fa-caret-left"></i>
+                        <span id=cart_count class="border-1 p-1 amount">1</span>
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="price">
+                    <span class="product_price">$63.99</span>
+                </div>
+            </div>
+        </div>
+    </aside>
     <nav>
 
         <div class="navbar-center">
@@ -56,7 +86,7 @@
 
         Проснувшись, мы пересмотрели все добро, награбленное шайкой на разбитом пароходе; там оказались и сапоги, и одеяла, и платья, и всякие другие вещи, а еще много книг, подзорная труба и три ящика сигар. Такими богачами мы с Джимом еще никогда в жизни не были. Сигары оказались первый сорт. До вечера мы валялись в лесу и разговаривали; я читал книжки; и вообще мы недурно провели время. Я рассказал Джиму обо всем, что произошло на пароходе и на пароме, и сообщил ему кстати, что это и называется приключением; а он ответил, что не желает больше никаких приключений. Джим рассказал, что в ту минуту, когда я залез в рубку, а он прокрался обратно к плоту и увидел, что плота больше нет, он чуть не умер со страха: так и решил, что ему теперь крышка, чем бы дело ни кончилось, потому что если его не спасут, так он утонет; а если кто нибудь его спасет, так отвезет домой, чтобы получить за него награду, а там мисс Уотсон, наверно, продаст его на Юг. Что ж, он был прав; он почти всегда бывал прав, голова у него работала здорово, - для негра, конечно.
     </div>
-<div class="fr">
+    <div class="fr">
     <div class="sm-foot md-foot or-3">
         <p>&copy;2020 Dog discount</p>
     </div>
@@ -135,6 +165,6 @@
         </div>
     </div>
 </div>
+<script src="js/app.js"></script>
 </body>
-
 </html>

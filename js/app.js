@@ -28,7 +28,33 @@ for(i=0;i<count1.length;i++){ document.getElementsByClassName('far fa-thumbs-up'
     let curVal = likeMe.textContent;
     likeMe.textContent =+(curVal) + 1;});}
 const cartMe=document.getElementById('cart');
-var count2 = document.getElementsByClassName('but-cart');
+var count2 = document.querySelectorAll('.but-cart');
 for(i=0;i<count2.length;i++){ document.getElementsByClassName('but-cart').item(i).addEventListener("click",function a(){
     let curVal = cartMe.textContent;
     cartMe.textContent =+(curVal) + 1;});}
+
+const cartitems = document.querySelector('.cart-items');
+const show_cart = document.querySelector('.fa-dolly-flatbed');
+const sidebar = document.querySelector('.sidebar');
+const closeBTN = document.querySelector('.close-btn');
+const count = document.getElementById('cart_count');
+show_cart.addEventListener("click",function () {
+    sidebar.classList.toggle('show-sidebar')
+});
+closeBTN.addEventListener('click',function () {
+    sidebar.classList.toggle('show-sidebar')
+})
+cartitems.addEventListener('click',function (event) {
+if (event.target.classList.contains('fa-caret-right')){
+    +event.target.previousElementSibling.innerText++;
+}
+    if (event.target.classList.contains('fa-caret-left')){
+        if (count.innerText >= '2') {
+        +event.target.nextElementSibling.innerText--;} else {
+
+        }
+    }
+})
+
+// console.dir(count.innerText);
+

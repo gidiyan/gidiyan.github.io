@@ -13,6 +13,7 @@
     <link href="css/form.css" rel="stylesheet">
     <link href="css/backup.css" rel="stylesheet">
     <link href="css/animation.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <link rel="icon" href="images/kindpng_625081.png">
@@ -45,6 +46,34 @@
                 </div>
             </div>
         </nav>
+<!-- cart  -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+                <h5 class="logo">Your shopping cart</h5>
+            </div>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="picture product-img">
+                        <img src="images/prod2.jpg" alt="product 4" class="img-fluid w-100">
+                    </div>
+                    <div class="product_name mx-auto">title</div>
+                    <div class="remove-btn text-right">
+                        <a href="#" class="reset-anchor"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                    <div class="quantity">
+                        <div class="border d-flex justify-content-around mx-auto">
+                            <i class="fas fa-caret-left"></i>
+                            <span id=cart_count class="border-1 p-1 amount">1</span>
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <span class="product_price">$63.99</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
         <!-- slider -->
         <article class="container slider">
             <div class="slides">

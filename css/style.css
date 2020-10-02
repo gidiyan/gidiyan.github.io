@@ -138,3 +138,10 @@ li{
 /*    border: none;*/
 /*    font-size: 2rem;*/
 /*}*/
+
+.d-flex{
+    display: flex !important;
+}
+.border-1{
+    padding-top: 10px
+}
