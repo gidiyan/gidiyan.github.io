@@ -34,6 +34,7 @@ for(i=0;i<count2.length;i++){ document.getElementsByClassName('but-cart').item(i
     cartMe.textContent =+(curVal) + 1;});}
 
 const cartitems = document.querySelector('.cart-items');
+const cartitem = document.querySelector('.cart-item')
 const show_cart = document.querySelector('.fa-dolly-flatbed');
 const sidebar = document.querySelector('.sidebar');
 const closeBTN = document.querySelector('.close-btn');
@@ -47,14 +48,17 @@ closeBTN.addEventListener('click',function () {
 cartitems.addEventListener('click',function (event) {
 if (event.target.classList.contains('fa-caret-right')){
     +event.target.previousElementSibling.innerText++;
-}
-    if (event.target.classList.contains('fa-caret-left')){
-        if (count.innerText >= '2') {
-        +event.target.nextElementSibling.innerText--;} else {
-
+} else if (event.target.classList.contains('fa-caret-left')){
+    if (count.innerText >= '2') {
+    +event.target.nextElementSibling.innerText--;} else {
         }
     }
+else if (event.target.classList.contains('fa-trash-alt'))
+    event.target.parentNode.parentNode.parentNode.remove(this);
 })
-
-// console.dir(count.innerText);
+console.dir(cartitems);
+let trash = document.getElementById('trash');
+ trash.addEventListener('click',function (event) {
+     event.target.parentNode.parentNode.parentNode.remove(this);
+ })
 
