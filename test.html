@@ -21,32 +21,80 @@
 
 </head>
 <body>
+<nav>
+    <div class="navbar-center">
+        <!-- navigation -->
+        <div class="sm-nav md-nav tb-nav">
+            <ul class="sm-brand md-brand tb-brand">
+                <li><img class="img-fluid" alt="" src="images/kindpng_625081.png"></li></ul>
+            <input id="hamburger" type="checkbox" class="trig_menu">
+            <ul class="sm-links md-links tb-links">
+                <li><a href="index.html">Main</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">News</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+
+            <ul class="sm-tools md-tools tb-tools">
+                <li><a href="#"><i class="fas fa-dolly-flatbed"></i>(<small id="cart"></small>)</a></li>
+                <li><a href="#"><i class="far fa-heart"></i>(<small id="like_me"></small>)</a></li>
+                <li><a href="#login"><i class="fas fa-user-alt"></i></a></li>
+            </ul>
+            <label for="hamburger" class="nav-ham"><i class="fa-bars fa"></i></label>
+        </div>
+    </div>
+</nav>
+<!-- cart  -->
 <aside class="sidebar">
     <div class="sidebar-header">
         <button class="close-btn"><i class="fas fa-times"></i></button>
         <h5 class="logo">Your shopping cart</h5>
     </div>
     <div class="cart-items">
-        <div class="cart-item">
-            <div class="picture product-img">
-                <img src="images/prod2.jpg" alt="product 4" class="img-fluid w-100">
-            </div>
-            <div class="product_name">product name</div>
-            <div class="remove-btn text-right">
-                <a href="#" class="reset-anchor m-auto"><i class="fas fa-trash-alt"></i></a>
-            </div>
-            <div class="quantity">
-                <div class="border d-flex justify-content-around mx-auto">
-                    <i class="fas fa-caret-left"></i>
-                    <span class="border-1 p-1 amount">1</span>
-                    <i class="fas fa-caret-right"></i>
-                </div>
-            </div>
-            <div class="price">
-                <span class="product_price">$63.99</span>
-            </div>
-        </div>
+<!--        <div class="cart-item">-->
+<!--            <div class="picture product-img">-->
+<!--                <img src="images/prod2.jpg" alt="product 4" class="img-fluid w-100">-->
+<!--            </div>-->
+<!--            <div class="product_name mx-auto">title</div>-->
+<!--            <div class="remove-btn text-right">-->
+<!--                <a href="#" class="reset-anchor"><i id="trash" class="fas fa-trash-alt"></i></a>-->
+<!--            </div>-->
+<!--            <div class="quantity">-->
+<!--                <div class="border d-flex justify-content-around mx-auto">-->
+<!--                    <i class="fas fa-caret-left"></i>-->
+<!--                    <span id=cart_count class="border-1 p-1 amount">1</span>-->
+<!--                    <i class="fas fa-caret-right"></i>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="prices">-->
+<!--               <span class="price"> $<span class="product_price">63.99</span></span>-->
+<!--               <span class="subtotal"> $<span class="product_subtotal">63.99</span></span>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </aside>
+<div class="container">
+    <div  class="row">
+        <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent">
+            <a href="#"><img alt="prod1" src="./images/prod1.jpg" class="prod-overflow img-fluid"></a>
+            <strong class="sm-bottom prod-bottom">28.99$</strong>
+            <strong class="sm-desc prod-desc">Origen Regional Red</strong>
+            <ul class="prod-text">
+                <li><button class="sm-button button but-like"><i class="far fa-thumbs-up"></i></button></li>
+                <li><button id="addtocart" class="sm-cart but-cart">Add to cart</button></li>
+                <li><button class="button"><i class="fas fa-info-circle"></i></button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<template id="cartitem">
+    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent">
+        <a href="#"><img alt="prod1" src="./images/prod4.jpg" class="img-fluid"></a>
+        <strong class="sm-bottom prod-bottom">26.99$</strong>
+        <strong class="sm-desc prod-desc">Earthborn Coastal Catch</strong>
+    </div>
+</template>
+<script src="js/test.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

@@ -22,6 +22,7 @@
 </head>
 <body>
     <div class="container">
+        <div class="over"></div>
         <!--main header page-->
         <nav>
             <div class="navbar-center">
@@ -38,8 +39,8 @@
                         </ul>
 
                     <ul class="sm-tools md-tools tb-tools">
-                        <li><a href="#"><i class="fas fa-dolly-flatbed"></i>(<small id="cart"></small>)</a></li>
-                        <li><a href="#"><i class="far fa-heart"></i>(<small id="like_me"></small>)</a></li>
+                        <li><a href="#"><i class="fas fa-dolly-flatbed"></i>(<small id="cart" class="count-items-in-cart"></small>)</a></li>
+                        <li><a href="#"><i class="far fa-heart"></i>(<small class="like_me"></small>)</a></li>
                         <li><a href="#login"><i class="fas fa-user-alt"></i></a></li>
                     </ul>
                 <label for="hamburger" class="nav-ham"><i class="fa-bars fa"></i></label>
@@ -53,25 +54,10 @@
                 <h5 class="logo">Your shopping cart</h5>
             </div>
             <div class="cart-items">
-                <div class="cart-item">
-                    <div class="picture product-img">
-                        <img src="images/prod2.jpg" alt="product 4" class="img-fluid w-100">
-                    </div>
-                    <div class="product_name mx-auto">title</div>
-                    <div class="remove-btn text-right">
-                        <a href="#" class="reset-anchor"><i id="trash" class="fas fa-trash-alt"></i></a>
-                    </div>
-                    <div class="quantity">
-                        <div class="border d-flex justify-content-around mx-auto">
-                            <i class="fas fa-caret-left"></i>
-                            <span id=cart_count class="border-1 p-1 amount">1</span>
-                            <i class="fas fa-caret-right"></i>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <span class="product_price">$63.99</span>
-                    </div>
-                </div>
+            </div>
+            <div class="cart-footer">
+<!--                <h3>Your total:$<span class="cart-total"></span></h3>-->
+                <button class="clear-cart btn-info font-size--default">Clear Cart</button>
             </div>
         </aside>
         <!-- slider -->
@@ -115,47 +101,7 @@
                 <header class="titles">
                     <h2>TOP PRODUCTS</h2>
                 </header>
-                <div id="prod" class="row">
-                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent">
-                        <a href="#"><img alt="prod1" src="./images/prod1.jpg" class="prod-overflow img-fluid"></a>
-                        <strong class="sm-bottom prod-bottom">28.99$</strong>
-                        <strong class="sm-desc prod-desc">Origen Regional Red</strong>
-                            <ul class="prod-text">
-                                <li><button class="sm-button button but-like"><i class="far fa-thumbs-up"></i></button></li>
-                                <li><button class="sm-cart but-cart">Add to cart</button></li>
-                                <li><button class="button"><i class="fas fa-info-circle"></i></button></li>
-                            </ul>
-                    </div>
-                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent">
-                        <a href="#"><img alt="prod1" src="./images/prod4.jpg" class="img-fluid"></a>
-                        <strong class="sm-bottom prod-bottom">26.99$</strong>
-                        <strong class="sm-desc prod-desc">Earthborn Coastal Catch</strong>
-                        <ul class="prod-text">
-                            <li><button class="but-like sm-button button"><i class="far fa-thumbs-up"></i></button></li>
-                            <li><button class="sm-cart but-cart add-to-cart">Add to cart</button></li>
-                            <li><button class="sm-button button"><i class="fas fa-info-circle"></i></button></li>
-                        </ul>
-                    </div>
-                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
-                        <a href="#"><img alt="prod1" src="./images/prod6.jpg" class="img-fluid"></a>
-                        <strong class="sm-bottom prod-bottom">69.99$</strong>
-                        <strong class="sm-desc prod-desc">Moschino Hoody</strong>
-                        <ul class="prod-text">
-                            <li><button class="but-like sm-button button"><i class="far fa-thumbs-up"></i></button></li>
-                            <li><button class="sm-cart but-cart">Add to cart</button></li>
-                            <li><button class="sm-button button"><i class="fas fa-info-circle"></i></button></li>
-                        </ul>
-                    </div>
-                    <div class="cs-1 md-2 tb-3 tb-4 pic-center pic-parent ">
-                        <a href="#"><img alt="prod1" src="./images/prod7.jpg" class="img-fluid"></a>
-                        <strong class="sm-bottom prod-bottom">79.99$</strong>
-                        <strong class="sm-desc prod-desc">Grey Suite</strong>
-                        <ul class="prod-text">
-                            <li><button class="but-like sm-button button"><i class="far fa-thumbs-up"></i></button></li>
-                            <li><button class="sm-cart but-cart">Add to cart</button></li>
-                            <li><button class="sm-button button"><i class="fas fa-info-circle"></i></button></li>
-                        </ul>
-                    </div>
+                <div id="prod" class="row showcase">
                 </div>
             </section>
         </div>
@@ -238,6 +184,31 @@
             </div>
         </div>
     </div>
+    <template id="cartItem">
+        <div class="cart-item">
+            <div class="picture product-img">
+                <img src="images/prod3.jpg" alt="name" class="img-fluid w-100">
+            </div>
+            <div class="product_name p-auto">Product name</div>
+            <div class="remove-btn text-right">
+                <a class="reset-anchor m-auto" href="#">
+                    <i class="fas fa-trash-alt"></i>
+                </a>
+            </div>
+            <div class="quantity">
+                <div class="border d-flex justify-content-around mx-auto">
+                    <i class="fas fa-caret-left inc-dec-btn"></i>
+                    <span class="border-1 p-1 amount">1</span>
+                    <i class="fas fa-caret-right inc-dec-btn"></i>
+                </div>
+            </div>
+            <div class="prices">
+                <span class="price">$<span class="product_price"></span></span>
+                <span class="subtotal">$<span class="product-subtotal"></span></span>
+            </div>
+        </div>
+    </template>
+<script src="js/data.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

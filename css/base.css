@@ -661,6 +661,7 @@
         text-transform: uppercase;
         font-size: 16px;
         border: transparent;
+        cursor: pointer;
     }
 
     .but-cart {
@@ -680,6 +681,7 @@
         font-size: 16px;
         border: 1px solid var(--color-2);
         border-radius: 0.5rem;
+        cursor: pointer;
     }
     .prod-text {
         display: block;
@@ -774,6 +776,7 @@
         display: flex;
         justify-content: flex-end;
         padding-top: 2.5rem;
+
     }
 
     .tb-tools a {

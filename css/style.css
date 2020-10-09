@@ -145,3 +145,43 @@ li{
 .border-1{
     padding-top: 10px
 }
+.over {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.2s;
+    width: 100vw;
+    height:100vh ;
+    visibility: hidden;
+
+}
+.over.active{
+    visibility: visible;
+}
+.notempty::before{
+    margin-right: 0.5px;
+    content: '(';
+    color: var(--color-1);
+}
+.notempty::after{
+    margin-left: 0.5px;
+    content: ')';
+    color: var(--color-1);
+}
+
+.notempty{
+    color: var(--color-3);
+}
+
+.btn_pressed{
+    color:var(--color-5);
+}
+.cart_pressed{
+    color:var(--color-5);
+    background-color: var(--color-3);
+}
