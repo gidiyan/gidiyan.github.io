@@ -1,8 +1,7 @@
 "use strict"
-//подсчет лайков. надо дописать проверку на единичный лайк
+
 let i;
 const likeMe=document.querySelector('.like_me');
-
 const cartItems = document.querySelector('.cart-items');
 const show_cart = document.querySelector('.fa-dolly-flatbed');
 const sidebar = document.querySelector('.sidebar');
@@ -121,7 +120,6 @@ function getProduct(id) {
 
 }
 
-
 function addProductToCart(){
     const addToCartButtons = [...document.querySelectorAll('.but-cart')];
     addToCartButtons.forEach( button => {
@@ -216,8 +214,8 @@ cartItems.addEventListener('click',event => {
 }
 
 
-    show_cart.addEventListener("click", () => sidebar.classList.toggle("show-sidebar"));
-    closeBTN.addEventListener("click", () => sidebar.classList.remove("show-sidebar"));
-    addProductToCart();
-    renderCart();
+show_cart.addEventListener("click", () => {sidebar.classList.toggle("show-sidebar");document.querySelector('.over').classList.add('active')});
+closeBTN.addEventListener("click", () => {sidebar.classList.remove("show-sidebar");document.querySelector('.over').classList.remove('active')});
+addProductToCart();
+renderCart();
 

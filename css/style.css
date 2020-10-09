@@ -153,8 +153,8 @@ li{
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 9;
-    transition: all 0.2s ease-in-out;
-    transition-delay: 0.2s;
+    transition: all 0.1s ease-in-out;
+    transition-delay: 0.1s;
     width: 100vw;
     height:100vh ;
     visibility: hidden;
