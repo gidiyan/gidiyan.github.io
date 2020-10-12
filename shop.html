@@ -20,7 +20,7 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container shoppage">
     <div class="over"></div>
     <!--main header page-->
     <nav>
@@ -111,22 +111,24 @@
         <section>
             <div class="row">
             <!--    side bar-->
-                <div class="tb-4">
+                <div class="tb-4  sm-categories categories">
                 <h5 class="large text_uppercase mt-3">Categories</h5>
-                <div class="py2 px-4 mb-3 mt-3"><strong class="medium text_uppercase">Holistic</strong>
-                 <ul class="medium">
-                <li class="incol mb-2 mt-3"><a class="reset_anchor" href="#">Kibble/Dry</a></li>
-                <li class="incol mb-2"><a class="reset_anchor" href="#">Canned</a></li>
-                <li class="incol mb-2"><a class="reset_anchor" href="#">Semi-Moist</a></li>
+                <div class="py2 px-4 mb-3 mt-3"><strong class="medium text_uppercase"></strong>
+                 <ul class="medium categories-list">
+<!--                <li class="incol mb-2 mt-3"><a class="reset_anchor" href="#">Kibble/Dry</a></li>-->
+<!--                <li class="incol mb-2"><a class="reset_anchor" href="#">Canned</a></li>-->
+<!--                <li class="incol mb-2"><a class="reset_anchor" href="#">Semi-Moist</a></li>-->
 
                 </ul>
                      </div>
-                <div class="py2 px-4 mb-3 mt-3"><strong class="medium text_uppercase">Premium</strong>
-            <ul class="medium">
-                <li class="incol mb-2 mt-3"><a class="reset_anchor" href="#">Kibble/Dry</a></li>
-                <li class="incol mb-2"><a class="reset_anchor" href="#">Canned</a></li>
-                <li class="incol mb-2"><a class="reset_anchor" href="#">Semi-Moist</a></li>
-            </ul></div></div>
+<!--                <div class="py2 px-4 mb-3 mt-3"><strong class="medium text_uppercase">Premium</strong>-->
+<!--            <ul class="medium">-->
+<!--                <li class="incol mb-2 mt-3"><a class="reset_anchor" href="#">Kibble/Dry</a></li>-->
+<!--                <li class="incol mb-2"><a class="reset_anchor" href="#">Canned</a></li>-->
+<!--                <li class="incol mb-2"><a class="reset_anchor" href="#">Semi-Moist</a></li>-->
+<!--            </ul>-->
+<!--                </div>-->
+                </div>
 
         <!--    main section-->
             <div class="tb-9">
@@ -142,6 +144,17 @@
                     <li>
                         <a class="reset-anchor"><i class="fas fa-th"></i></a>
                     </li>
+                    <li class="reset-anchor">
+                        <select name="sorting" id=""
+                                class="selectpicker ml-auto"
+                                data-width="200"
+                                data-styly="bs-select-form-control"
+                                data-title="Default sorting">
+                            <option value="default">Default sorting</option>
+                            <option value="popularity">Popularity</option>
+                            <option value="low-high">Low To High</option>
+                            <option value="high-low">High To Low</option>
+                    </select></li>
                 </ul>
             </div>
         </div>
