@@ -254,7 +254,7 @@ class App {
 
     createCategory(category) {
         return `
-         <a class="cat-overflow" data-category="${category.name}" href="#"><img alt="categories block" src="${category.img}" class="img-fluid transform"><strong class="text-inside1 category-item" data-category="${category.name}">"${category.name}"</strong></a>
+         <a class="cat-overflow" data-category="${category.name}" href="shop.html"><img alt="categories block" src="${category.img}" class="img-fluid transform"><strong class="text-inside1 category-item" data-category="${category.name}">"${category.name}"</strong></a>
         `
     }
 
