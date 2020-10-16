@@ -70,12 +70,18 @@ class App {
 `;
 
     makeShowcase(products) {
+        if (document.querySelector('.mainpage')) {
+            let result = '';
+            for (let i = 0; i < 4; i++) {
+                result += this.createProduct(products[i]);
+            } document.querySelector('.showcase').innerHTML = result;
+        } else {
         let result = '';
         products.forEach(item => {
             result += this.createProduct(item);
         });
         document.querySelector('.showcase').innerHTML = result;
-    }
+    }}
 
     CreateCartItem(item) {
         const div = document.createElement('div');
@@ -111,26 +117,18 @@ class App {
         addToCartButtons.forEach(button => {
             const countItemsInCart = document.querySelector('.count-items-in-cart');
             button.addEventListener('click', event => {
-                // let product = this.getProduct(event.target.closest('.product').getAttribute('data-id'));
-                // let incart = this.cart.some(elem => elem.id === product.id);
-                // console.log(product);
-                // console.log(incart);
-                // if(incart){
-                //     this.cart.forEach(elem => {
-                //         if(elem.id === product.id){
-                //             elem.amount += 1;
-                //         }
-                //     })}
-                // else
-                    if (event.target.classList.contains('cart_pressed')) {} else {
-                    let cartItem = {
-                        ...this.getProduct(event.target.closest('.product').getAttribute('data-id')),
-                        amount: 1
-                    };
+                let product = this.getProduct(event.target.closest('.product').getAttribute('data-id'));
+                let incart = this.cart.some(elem => elem.id === product.id);
+                if(incart){
+                    this.cart.forEach(elem => {
+                        if(elem.id === product.id){
+                            elem.amount += 1;
+                            Storage.saveCart(this.cart);
+                        }
+                    })}
+                else {
+                    let cartItem = { ...product, amount: 1 };
                     this.cart = [...this.cart, cartItem];
-                    this.CreateCartItem(cartItem);
-                    event.target.classList.add('cart_pressed');
-                    event.target.innerText = "Added to cart";
                     +countItemsInCart.textContent++;
                     if (+(countItemsInCart.textContent) > 0) {
                         countItemsInCart.classList.add('notempty');
@@ -159,15 +157,6 @@ class App {
     actualNavCartCount(cartId) {
         const toClear = document.querySelectorAll('.product');
         const countItemsInCart = document.querySelector('.count-items-in-cart');
-        for (let i = 0; i < toClear.length; i++) {
-            if (+(toClear.item(i).getAttribute('data-id')) === +(cartId.substr(2,2))) {
-                this.createProduct(cartId.substr(2,2));
-                let y = document.querySelectorAll('.cart_pressed');
-                console.dir(y);
-                for (let i = 0; i < y.length; i++) {
-                    if (+(y[i].parentElement.parentElement.parentElement.parentElement.dataset.id) === +(cartId.substr(2,2))) {
-                        y[i].textContent = "ADD TO CART";
-                        y[i].classList.remove('cart_pressed');
                         +countItemsInCart.textContent--;
                         if (+(countItemsInCart.textContent) > 0) {
                             countItemsInCart.classList.add('notempty');
@@ -178,10 +167,6 @@ class App {
                         this.setcartTotal(this.cart);
                         Storage.saveCart(this.cart);
                     }
-                }
-            }
-        }
-    }
 
     renderCart() {
         this.clearCart.addEventListener('click', () => this.clearcart());
