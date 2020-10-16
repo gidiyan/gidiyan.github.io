@@ -3,7 +3,7 @@ const products=[
         id:1,
         img:"images/prod1.jpg",
         name:"Origen Regional Red",
-        price:26.99,
+        price:29.99,
         category:"Food",
         subcategory:"Kibble/Dry"
     },
@@ -19,7 +19,7 @@ const products=[
         id:3,
         img:"images/prod3.jpg",
         name:"Carnilove Carps&Trout",
-        price:28.99,
+        price:35.99,
         category: "Food",
         subcategory:"Canned"
     },
@@ -35,7 +35,7 @@ const products=[
         id:5,
         img:"images/prod5.jpg",
         name:"Carnilove Salmon&Turkey",
-        price:30.99,
+        price:32.99,
         category: "Food",
         subcategory: "Semi-Moist"
     },
@@ -51,14 +51,14 @@ const products=[
         id:7,
         img:"images/prod7.jpg",
         name:"Grey Suite",
-        price:32.99,
+        price:45.99,
         category: "Wear",
         subcategory: "Wear"
     }, {
         id:8,
         img:"images/prod8.jpg",
         name:"Smart Toy",
-        price:33.99,
+        price:39.99,
         category: "Toys",
         subcategory: "Toys"
     },
