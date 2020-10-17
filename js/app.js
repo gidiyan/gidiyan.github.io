@@ -1,6 +1,9 @@
 "use strict"
 
 class Storage {
+    static saveStorageItem(key,item){
+        localStorage.setItem(key, JSON.stringify(item));
+    }
     static saveProducts(product){
         localStorage.setItem('products', JSON.stringify(products));
     }
@@ -15,12 +18,18 @@ class Storage {
         return products.find(product => product.id === +(id));
     }
     static getProducts(){
-        return JSON.parse(localStorage.getItem("products"));
+        return JSON.parse(localStorage.getItem('products'));
+    }
+    static getCategories(){
+        return JSON.parse(localStorage.getItem('categories'));
+    }
+    static getSubCategories(){
+        return JSON.parse(localStorage.getItem('subcategories'));
     }
 }
 
 class Product {
-    getProducts(){
+    makeModel(products){
         return products.map(item => {
             const id = item.id;
             const name = item.name;
@@ -29,6 +38,27 @@ class Product {
             const category = item.category;
             const subcategory = item.subcategory;
             return {id,name,price,img,category,subcategory};
+        });
+    }
+}
+
+class Category {
+    makeModel(categories){
+        return categories.map(item => {
+            const id = item.id;
+            const name = item.name;
+            const img = item.img;
+            return {id,name,img};
+        });
+    }
+}
+class SubCategory {
+    makeModel(subcategories){
+        return subcategories.map(item => {
+            const id = item.id;
+            const name = item.name;
+            const img = item.img;
+            return {id,name,img};
         });
     }
 }
@@ -45,16 +75,14 @@ class App {
         const show_cart = document.querySelector('.fa-dolly-flatbed');
         show_cart.addEventListener("click", () => this.opencart());
         closeBTN.addEventListener("click", () => this.closecart());
-        if (document.querySelector('.categoriesShow')) {
-            this.makeCategories(categories);
-        };
-        this.makeShowcase(products);
-        let data = new Product();
-        Storage.saveProducts(data.getProducts());
+
+        // this.makeShowcase(products);
+        // let data = new Product();
+        // Storage.saveProducts(data.getProducts());
         this.cart = Storage.getCart();
     }
 
-    getProduct = (id) => products.find(product => product.id === +(id));
+    getProduct = (id) => Storage.getProducts().find(product => product.id === +(id));
     createProduct = (data) =>
         `
        <div class="product cs-1 md-2 tb-3 tb-4 pic-center pic-parent"  data-id="${data.id}">
@@ -270,7 +298,7 @@ class App {
     categoriesList() {
         if (document.querySelector('.categories-list')) {
             let result = ``;
-            subcategories.forEach(element => {
+            Storage.getSubCategories().forEach(element => {
                 result += `<li class="incol mb-2 mt-3"><a class="reset_anchor  subcategory-item" href="#" data-subcategory="${element.name}">${element.name}</a></li>`;
             });
             document.querySelector('.categories-list').innerHTML = result;
@@ -317,10 +345,12 @@ class App {
                         this.makeShowcase(Storage.getProducts().sort(this.compareValue('id', 'asc')));
                         break;
                 }
+                this.addProductToCart();
+                this.testlike();
+                this.renderCategory();
+                this.categoriesList();
             });
         }
-
-
     }
 
     compareValue(key,order = 'asc'){
@@ -334,10 +364,34 @@ class App {
             if (varA>varB){comparison=1;} else if (varA<varB) {comparison=-1;} return ((order==='desc')?(comparison*(-1)):comparison);
         }
     };
+
+    fetchDATA(dataBase, model) {
+        const baseUrl =`https://my-json-server.typicode.com/gidiyan/db/${dataBase}`;
+        fetch(baseUrl)
+            .then(response => {
+                if(response.status !== 200) {
+                    console.error(`Looks like there was a problem. Status code: ${response.status}`);
+                    return;
+                }
+                response.json().then(dataJson => {
+                    Storage.saveStorageItem(dataBase, model.makeModel(dataJson));
+                })
+            })
+            .catch(err => console.error('fetch Error : -S', err));
+    }
+
 }
 
 (function(){
     const app = new App();
+    if (document.querySelector('.categoriesShow')) {
+        app.fetchDATA("categories", new Category());
+        app.fetchDATA("subcategories", new SubCategory());
+        app.makeCategories(Storage.getCategories());
+        app.categoriesList(Storage.getSubCategories());
+    }
+    app.fetchDATA('products', new Product());
+    app.makeShowcase(Storage.getProducts());
     app.addProductToCart();
     app.renderCart();
     app.testlike();
